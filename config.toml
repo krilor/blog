@@ -1,0 +1,39 @@
+baseURL = "https://krilor.github.io/"
+languageCode = "en"
+title = "Software and tech | Kristoffer Lorentsen"
+
+theme = "hugo-coder" 
+canonifyurls = true
+
+pygmentsstyle = "b2"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+[params]
+    author = "Kristoffer Lorentsen"
+    info = "Tech optimist and self-proclaimed campion of sideproject abandoment."
+    description = "Kristoffer Lorentsen take on tech and code."
+    keywords = "blog,developer,personal,software"
+
+    avatarurl = "images/avatar.jpg"
+
+    favicon_32 = "/img/favicon-32x32.png"
+    favicon_16 = "/img/favicon-16x16.png"
+
+    footercontent = "I write about anything code and tech related."
+
+    hidecredits = false
+    hidecopyright = false
+
+    rtl = false
+
+    math = true
+
+[[menu.main]]
+    name = "Blog"
+    weight = 1
+    url  = "/posts/"
+[[menu.main]]
+    name = "About"
+    weight = 2
+    url  = "/about/"
