@@ -5,7 +5,7 @@ title = "Software and tech | Kristoffer Lorentsen"
 theme = "hugo-coder" 
 canonifyurls = true
 
-pygmentsstyle = "b2"
+pygmentsstyle = "monokai"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
