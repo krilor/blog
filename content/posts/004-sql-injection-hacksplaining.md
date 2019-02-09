@@ -9,6 +9,8 @@ categories = ['hacking','ctf','security']
 externalLink = ""
 +++
 
+... and it felt _good_!
+
 This week I spent a couple of hours finding my way through [Norwegian Police Security Services](https://www.pst.no/) new [job application](https://www.finn.no/job/fulltime/ad.html?finnkode=136455922) which required "hacking" to apply. See the solution on [Reddit](https://www.reddit.com/r/norge/comments/advuc7/la_oss_l%C3%B8se_g%C3%A5ten_sammen/), [GitHub](https://gist.github.com/BobuSumisu/501dafd4d7166d2a295a68c20bc3eb41) and [Kode24](https://www.kode24.no/kodenytt/losningen-pa-pst-sin-jobbannonse-gate/70660113). I had a lot of fun trying to figure out the puzzles and it got me excited about learning more.
 
 While I liked the challenge, I do tend to like to learn in a more structured way. Enter [Hacksplaining](https://www.hacksplaining.com/)! I've allways known about SQL injection, but never actually taken the time to dig into the details behind it. Hacksplaining [lesson on SQL injection](https://www.hacksplaining.com/exercises/sql-injection) does a really good job at showing how easy it can be and how to protect oneself against it.
