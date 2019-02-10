@@ -39,8 +39,9 @@ I did this partly because it's a long time since I've done any Vue-related work 
         <textarea v-model="intext" placeholder="Cipher text goes here." rows="6"></textarea>
         <div>
             <input v-model.number="key" type="number" min="-25" max="25">
-            <button v-on:click="plus">+</button>
-            <button v-on:click="minus">-</button>
+            <button v-on:click="plus">Up</button>
+            <button v-on:click="minus">Down</button>
+            <button v-on:click="flip">Flip!</button>
         </div>
         <h3>Output</h3>
         <pre class="output">{{ ciphered }}</pre>
@@ -71,12 +72,12 @@ I did this partly because it's a long time since I've done any Vue-related work 
                             this.key = this.key - 1
                         }
                     },
+                    flip : function(){
+                        this.intext = this.ciphered
+                        this.key = - this.key
+                    },
                     cipher: function(text, key) {
 
-                        if ( text.length == 0 ) {
-                            return 'Add some text and see what happens!'
-                        }
-                        
                         var output = ''
                         var code = 0
 
@@ -99,7 +100,8 @@ I did this partly because it's a long time since I've done any Vue-related work 
                 },
                 computed: {
                     ciphered: function () {
-                        return this.cipher(this.intext, this.key)
+
+                        return this.cipher(( this.intext == '' ? 'Cipher text goes here.' : this.intext ), this.key)
                     },
                     shiftalpha: function() {
                         return this.cipher( this.alpha, this.key )
