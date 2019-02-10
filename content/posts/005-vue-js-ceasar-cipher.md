@@ -9,7 +9,7 @@ categories = ["CTF", "Vue"]
 externalLink = ""
 +++
 
-Related to my recent interest in CTF, I've spent a little time to implement a simple [Ceasar cipher](https://en.wikipedia.org/wiki/Caesar_cipher) in [Vue.js](https://vuejs.org/). It allows the user to replace letters by a letter some adjustable number of positions up or down the alphabet.
+Related to my recent interest in CTF, I've spent a little time to implement a simple [Ceasar cipher](https://en.wikipedia.org/wiki/Caesar_cipher) in [Vue.js](https://vuejs.org/). It allows the user to replace letters with another letter some adjustable number of positions up or down the alphabet.
 
 I did this partly because it's a long time since I've done any Vue-related work and also because I find other online Ceasar cipher sites to be a bit clunky and not as user friendly. I mean, there is no reason to have to click a `Encode` or `Decode` button. Come, on, it's 2019 allready! Once I change the input, I expect things to happen!
 
@@ -119,4 +119,4 @@ Using the character code, the integer "value" of a letter, simple math can shift
 
 ## All done
 
-That's it. I just wanted to show off my shiny new toy! If you want to see the source, you can find it in my [blogs source code on GitHub]()
+That's it. I just wanted to show off my shiny new toy! If you want to see the source, you can find it in my [blogs source code on GitHub](https://github.com/krilor/blog/blob/master/content/posts/005-vue-js-ceasar-cipher.md)
