@@ -38,7 +38,7 @@ I did this partly because it's a long time since I've done any Vue-related work 
         <h3>Input</h3>
         <textarea v-model="intext" placeholder="Cipher text goes here." rows="6"></textarea>
         <div>
-            <input v-model.number="key" type="number" min="-25" max="25">
+            <input v-model.number="key" type="number" min="0" max="25">
             <button v-on:click="plus">Up</button>
             <button v-on:click="minus">Down</button>
             <button v-on:click="flip">Flip!</button>
@@ -65,16 +65,20 @@ I did this partly because it's a long time since I've done any Vue-related work 
                     plus: function(){
                         if ( this.key < 25 ){
                             this.key = this.key + 1
+                        } else if ( this.key == 25 ) {
+                            this.key = 0
                         }
                     },
                     minus: function(){
-                        if ( this.key > -25 ){
+                        if ( this.key > 0 ){
                             this.key = this.key - 1
+                        } else if ( this.key == 0 ) {
+                            this.key = 25
                         }
                     },
                     flip : function(){
                         this.intext = this.ciphered
-                        this.key = - this.key
+                        this.key = 26 - this.key
                     },
                     cipher: function(text, key) {
 
@@ -86,9 +90,9 @@ I did this partly because it's a long time since I've done any Vue-related work 
                             code = text.charCodeAt(i)
                             
                             if ( code >= 65 && code <= 90 ) {
-                                output += String.fromCharCode( ( code - 65 + key + 26 ) % 26  + 65 )
+                                output += String.fromCharCode( ( code - 65 + key ) % 26  + 65 )
                             } else if ( code >= 97 && code <= 122 ) {
-                                output += String.fromCharCode( ( code - 97 + key + 26 ) % 26  + 97 )
+                                output += String.fromCharCode( ( code - 97 + key ) % 26  + 97 )
                             } else {
                                 output += text.charAt(i)
                             }
